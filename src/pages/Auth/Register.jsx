@@ -9,7 +9,7 @@ import LoginSlider from "@/components/auth/LoginSlider";
 import LegalModal from "@/components/auth/LegalModal"; 
 
 // URL Backend & Background
-const API_BASE_URL = "http://localhost:8386"; 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8386"; 
 const BG_URL = "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop";
 
 // --- NỘI DUNG ĐIỀU KHOẢN ---

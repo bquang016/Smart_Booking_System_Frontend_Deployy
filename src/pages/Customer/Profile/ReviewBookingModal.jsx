@@ -17,7 +17,7 @@ import Button from "@/components/common/Button/Button";
 import RatingStars from "@/pages/Customer/MyBookings/components/RatingStars";
 
 // --- HELPER XỬ LÝ ẢNH ---
-const API_BASE_URL = "http://localhost:8386";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8386";
 const getImageUrl = (path) => {
   if (!path) return "https://via.placeholder.com/150";
   if (path.startsWith("http")) return path;

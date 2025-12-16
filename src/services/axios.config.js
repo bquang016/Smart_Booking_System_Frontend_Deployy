@@ -1,11 +1,13 @@
 import axios from "axios";
 
-// Lấy URL từ biến môi trường hoặc fallback về localhost
-const API_URL =
-    import.meta.env.VITE_REACT_APP_API_URL || "http://localhost:8386/api/v1";
+// 1. Lấy Domain gốc từ biến môi trường (Ví dụ: http://localhost:8386)
+const ROOT_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8386";
+
+// 2. Nối thêm /api/v1 để tạo Base URL cho Axios
+const API_URL = `${ROOT_URL}/api/v1`;
 
 const api = axios.create({
-    baseURL: API_URL,
+    baseURL: API_URL, // Kết quả: http://localhost:8386/api/v1
     headers: {
         "Content-Type": "application/json",
     },

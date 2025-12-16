@@ -10,7 +10,7 @@ import ToastPortal from "@/components/common/Notification/ToastPortal";
 import LoginSlider from "@/components/auth/LoginSlider";
 
 // URL Backend (Cổng OAuth2)
-const API_BASE_URL = "http://localhost:8386";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8386";
 const BG_URL = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 
 const Login = () => {
